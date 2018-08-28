@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>迭代</title>
+</head>
+
+<body>
+  <script>
+    // var arr = ['a', 'b', 'c']
+    // for (const key in arr) {
+    //   if (arr.hasOwnProperty(key)) {
+    //     const element = arr[key];
+    //     console.log(element)
+    //   }
+    // }
+
+    // var els = document.querySelectorAll('*');
+    // for (const iterator of els) {
+    //   console.log(iterator);
+    // }
+
+    var obj = {
+      w: 100,
+      h: 200
+    };
+    obj[Symbol.iterator] = function() {
+      let keys = Object.keys(obj);
+      let len = keys.length;
+      let n = 0;
+      return {
+        next() {
+          if(n < len) {
+            return {
+              value: {k: keys[n], v: obj[keys[n++]]},
+              done: false
+            }
+          } else {
+            return {
+              done: true
+            }
+          }
+        }
+      }
+    }
+
+    for (const {k, v} of obj) {
+      console.log(k, v)
+    }
+  </script>
+</body>
+
+</html>

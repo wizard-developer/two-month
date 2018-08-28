@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    button.active {
+      background: #f60;
+    }
+    p {
+
+      display: none;
+    }
+    p.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button class="active">选项1</button>
+  <button>选项2</button>
+  <button>选项3</button>
+  <p class="active">11</p>
+  <p>22</p>
+  <p>33</p>
+  <script>
+    // let block = 1;
+    // const NO_CHANGE = 1;
+    // console.log(NO_CHANGE);
+    let btns = document.querySelectorAll('button');
+    let ps = document.querySelectorAll('p');
+
+    for (let index = 0; index < btns.length; index++) {
+      btns[index].onclick= function() {
+        for (let i = 0; i < btns.length; i++) {
+          btns[i].className = '';
+          ps[i].className = '';
+        }
+         this.className = 'active';
+         ps[index].className = 'active';
+      }
+    }
+
+    const a = [1, 2,3]
+    a.push('4') // yes
+
+    const NOT_CHANGE_ARRAY = Object.freeze([1, 2, 3])
+    NOT_CHANGE_ARRAY.push('rrr') // error
+
+  </script>
+</body>
+</html>

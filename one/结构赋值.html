@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>结构赋值</title>
+</head>
+<body>
+  <script>
+    // let [ab, c] = [12, 3] // 需要一一对应
+    // let { foo, bar } = { foo: 'aaa', bar: 'yyy' } //
+    // let { foo2, bar2:B } = { foo2: 'qqq', bar2: 'niubi' }
+    // let { foo3:[a, b] } = { foo3: [10, 20], bar3: 'bb' }
+    let { left } = getComputedStyle(document.body)
+    console.log(left)
+  </script>
+</body>
+</html>
