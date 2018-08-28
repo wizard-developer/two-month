@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>箭头函数</title>
+</head>
+<body>
+  <script>
+  //  (window => console.log(window))(window)
+  // let f1 = e => console.log(e);
+  // console.log(f1())
+  // let a = (x) => (y = x+100) => console.log(x + y)
+  // console.log(a(1)(2))
+
+  /*
+    this
+  */
+
+  // function fn() {
+  //   console.log(this)
+  // }
+
+  // fn6() // window
+  // var obj = {};
+  // obj.f = fn6;
+  // obj.f() // obj
+  // document.onclick = fn6; // document
+  // 创建函数的时候就绑定好了 this
+  // let fn7 = () => {
+  //   console.log(this)
+  // }
+
+  </script>
+</body>
+</html>

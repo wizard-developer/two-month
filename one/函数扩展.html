@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数扩展</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    let app = document.querySelector('#app');
+    // function fn1(x, y) {
+    //   let x = x || 0;
+    // }
+
+    // function fn2(x = 0, y = 1) {
+    //   document.querySelector('#app').innerHTML = x + y;
+    // }
+    // fn2();
+
+    // function fn3(x, y = 0) {
+    //   app.innerHTML = y;
+    // }
+    // fn3()
+
+    // function fn4(obj = {x: 1, y: 2}) {
+    //   console.log(obj)
+    // }
+    // fn4()
+
+    // rest参数
+    function arrayPush(arr, x, ...y) {
+      // return arr.concat(x, ...y);
+      return [...arr, x, ...y];
+    }
+
+    var arr = [1,2,3,4,5,6];
+    let a = arrayPush(arr, 2, 32,3423,5,54,34534,7657565,32423,3)
+    console.log(a)
+  </script>
+</body>
+</html>
