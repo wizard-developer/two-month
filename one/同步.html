@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>同步</title>
+</head>
+<body>
+  <button id="button">按钮</button>
+  <div id="time"></div>
+  <script>
+      var btn = document.querySelector('#button');
+      var time = document.querySelector('#time');
+
+      btn.onclick = function() {
+       alert('阻止了后面div')
+      }
+      // let i = 0;
+      // setInterval(() => time.innerHTML = i++, 1000)
+  </script>
+</body>
+</html>

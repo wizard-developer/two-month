@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map</title>
+</head>
+<body>
+  <script>
+    /*
+      WeakMap
+    */
+
+  // 私有数据保护
+  const Person = (function() {
+    let _gender = new WeakMap();
+    function $P(name, gender) {
+      this.name = name;
+      _gender.set(this, gender);
+    }
+
+    $P.prototype.getGender = function() {
+      return _gender.get(this);
+    }
+
+    $P.prototype.setGender = function(newGender) {
+      _gender.set(this, newGender);
+    }
+
+    $P.getGenders = function() {
+      return _gender;
+    }
+
+    return $P;
+  })()
+  let p1 = new Person('djkloop', '男');
+  let p2 = new Person('djkloop1', 'yeah');
+  p1.setGender('good');
+  setInterval(function() {
+    console.log(Person.getGenders())
+  }, 1000);
+  </script>
+</body>
+</html>

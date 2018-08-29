@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map</title>
+</head>
+<body>
+  <script>
+    /*
+      Map
+    */
+  //  let obj1 = {
+  //    x: 1,
+  //    y: 1
+  //  }
+
+  let map1 = new Map();
+  map1.set('x', 1);
+  map1.set(true, 1)
+  console.log(map1)
+
+  // 私有数据保护
+  const Person = (function() {
+    let _gender = new Map();
+    function $P(name, gender) {
+      this.name = name;
+      _gender.set(this, gender);
+    }
+
+    $P.prototype.getGender = function() {
+      return _gender.get(this);
+    }
+
+    $P.prototype.setGender = function(newGender) {
+      _gender.set(this, newGender);
+    }
+
+    return $P;
+  })()
+  let p1 = new Person('djkloop', '男');
+  let p2 = new Person('djkloop1', 'yeah');
+  p1.setGender('good');
+  console.log(p2.getGender(), p1.getGender())
+  </script>
+</body>
+</html>

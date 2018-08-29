@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promise</title>
+</head>
+
+<body>
+  <script>
+    /*
+      Promise
+        default: pending
+        success: resolved
+        error: rejectd
+
+      调用这两个函数可以改变preomise的状态
+    */
+
+  //  let p1 = new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       console.log(1)
+  //       // rejectd()
+  //       resolve(100)
+  //     }, 3000)
+  //   });
+
+  //   p1.then(data => {
+  //     console.log(data)
+  //   }, () => {
+  //     console.log('我出错了')
+  //   })
+
+      // let p1 = new Promise((resolve, reject) => {
+      //   setTimeout(function() {
+      //     resolve(1)
+      //   }, Math.random() * 1000)
+      // })
+
+      // let p2 = new Promise((resolve, reject) => {
+      //   setTimeout(function() {
+      //      resolve(2)
+      //   }, Math.random() * 1000)
+      // })
+
+      // Promise.all([p1, p2]).then(data => {
+      //   console.log(data)
+      // }, err => {
+      //   console.log(err)
+      // })
+  </script>
+</body>
+
+</html>
