@@ -33,4 +33,3 @@ if(process.argv.includes('-i')) {
 }
 
 console.log('创建项目成功');
-
