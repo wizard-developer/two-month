@@ -32,3 +32,10 @@ function rmdir(dirPath) {
     }
   })
 }
+
+// 监听文件改变
+// 也可以监听文件夹 -> fs.watch
+// fs.watchFile('./data/1.txt', data => {
+//   console.log(data, 'changed')
+// })
+
