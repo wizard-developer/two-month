@@ -1,3 +1,5 @@
-const electron = require('electron');
+const {app, BrowserWindow, Menu, MenuItem} = require('electron');
 
-console.log('hello')
+app.on('ready', () => {
+  let win = new BrowserWindow({width: 800, height: 600, resizable: false, title: '天天爱学习'});
+})
