@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #eee;
+}
+
+#main h1 {
+  color: #444;
+  text-align: center;
+}
+
+
+#main {
+  padding: 0;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%;
+}
+
+#book-list {
+  padding: 0;
+  overflow: auto;
+  height: 595px;
+}
+
+#book-list li {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #880e4f;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3);
+  cursor: pointer;
+  color: #880e4f;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+}
+
+form .field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+form label {
+  text-align: right;
+  padding: 0;
+}
+
+form select,
+form input {
+  margin: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+form button {
+  display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-size: 2em;
+    border-radius: 4px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ad1457;
+    border-color: #ad1457;
+}
+
+#book-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: #ad1457;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  color: #fff;
+}
